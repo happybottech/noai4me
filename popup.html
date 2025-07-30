@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css" />
+  <title>NoAI4Me Control Panel</title>
+</head>
+<body>
+  <h1>NoAI4Me</h1>
+  <div id="statusBar">Loading status...</div>
+
+  <label class="switch">
+    <input type="checkbox" id="toggleSwitch">
+    <span>AI Blocking</span>
+  </label>
+
+  <details open>
+    <summary>Whitelist Settings</summary>
+    <input type="text" id="filterInput" placeholder="Search extensions..." />
+    <select id="whitelistSelect" size="6"></select>
+    <button id="addWhitelist">Add to Whitelist</button>
+    <ul id="whitelist"></ul>
+  </details>
+
+  <details>
+    <summary>Site Rules</summary>
+    <div id="siteRules"></div>
+    <button id="addSiteRule">Add Current Site</button>
+  </details>
+
+  <details>
+    <summary>Logs</summary>
+    <ul id="logList"></ul>
+    <button id="clearLogs">Clear Logs</button>
+  </details>
+
+  <script src="popup.js"></script>
+</body>
+</html>
