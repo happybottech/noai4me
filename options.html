@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NoAI4Me Settings</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    body.dark {
+      background-color: #1e1e1e;
+      color: #f5f5f5;
+    }
+
+    body.dark section {
+      background-color: #2c2c2c;
+    }
+
+    body.dark input, body.dark textarea {
+      background-color: #444;
+      color: #f5f5f5;
+      border: 1px solid #777;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    section {
+      margin-bottom: 30px;
+      background: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input[type="text"], input[type="file"], textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      background: #eee;
+      margin: 5px 0;
+      padding: 6px 10px;
+      border-radius: 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    li button {
+      background: #c0392b;
+      color: white;
+      border: none;
+      padding: 4px 8px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>NoAI4Me - Extension Settings</h1>
+
+  <section>
+    <h2>Appearance</h2>
+    <label>
+      <input type="checkbox" id="darkModeToggle">
+      Enable Dark Mode
+    </label>
+  </section>
+
+  <section>
+    <h2>Whitelist Management</h2>
+    <label for="whitelistInput">Add Extension ID or Name:</label>
+    <input type="text" id="whitelistInput" placeholder="e.g. gcal, gdocs, example-extension-id">
+    <button id="addToWhitelist">Add to Whitelist</button>
+    <ul id="whitelistDisplay"></ul>
+  </section>
+
+  <section>
+    <h2>Site Rule Management</h2>
+    <label for="siteRuleInput">Add Site Domain or Pattern:</label>
+    <input type="text" id="siteRuleInput" placeholder="e.g. example.com or *.google.com">
+    <button id="addSiteRule">Add Site Rule</button>
+    <ul id="siteRuleDisplay"></ul>
+  </section>
+
+  <section>
+    <h2>Export / Import</h2>
+    <button id="exportSettings">Export Settings</button>
+    <input type="file" id="importFile" />
+    <button id="importSettings">Import Settings</button>
+  </section>
+
+  <section>
+    <h2>Log Viewer</h2>
+    <ul id="logDisplay"></ul>
+    <button id="clearLogs">Clear Logs</button>
+  </section>
+
+  <section>
+    <h2>Info</h2>
+    <p><strong>Version:</strong> 2.0</p>
+    <p><a href="https://github.com/happybottech/noai4me" target="_blank">View on GitHub</a></p>
+  </section>
+
+  <script src="options.js"></script>
+</body>
+</html>
